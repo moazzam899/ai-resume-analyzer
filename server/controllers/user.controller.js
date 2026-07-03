@@ -17,13 +17,15 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new ApiError(400, "User already exists");
   }
 
-//   const hashedPassword = await bcrypt.hash(password, 10);
+  console.log("Step 1");
 
   const user = await User.create({
     name,
     email,
     password,
   });
+
+  console.log("Step 2");
 
   if (!user) {
     throw new ApiError(500, "Failed to create user");
@@ -41,6 +43,7 @@ const registerUser = asyncHandler(async (req, res) => {
     )
   );
 });
+
 
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;

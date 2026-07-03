@@ -24,5 +24,9 @@
     "openai": "^6.44.0",
     "pdf-parse": "^1.1.1",
     "uuid": "^14.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.16"
   }
 }

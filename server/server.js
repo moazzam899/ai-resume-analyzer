@@ -22,6 +22,10 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.use((err, req, res, next) => {
+  console.error("========== ERROR ==========");
+  console.error(err);
+  console.error(err.stack);
+
   res.status(err.statusCode || 500).json({
     success: false,
     message: err.message || "Internal Server Error",

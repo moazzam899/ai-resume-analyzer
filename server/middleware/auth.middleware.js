@@ -5,7 +5,11 @@ const ApiError = require("../utils/ApiError");
 
 const verifyJWT = asyncHandler(async (req, res, next) => {
   // Header se token lo
+
+  console.log("Authorization Header:",req.headers.authorization);
   const token = req.header("Authorization")?.replace("Bearer ", "");
+
+
 
   if (!token) {
     throw new ApiError(401, "Unauthorized request");
