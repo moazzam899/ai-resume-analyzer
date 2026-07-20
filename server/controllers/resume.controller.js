@@ -12,25 +12,6 @@ const { analyzeResume} = require("../services/gemini.service");
 const{generateInterviewQuestions}=require("../services/gemini.service");
 const mongoose = require("mongoose");
 
-// const getResumeById = asyncHandler(async (req, res) => {
-
-//   const resume = await Resume.findOne({
-//     _id: req.params.id,
-//     user: req.user._id,
-//   });
-
-//   if (!resume) {
-//     throw new ApiError(404, "Resume not found");
-//   }
-
-//   return res.status(200).json(
-//     new ApiResponse(
-//       200,
-//       resume,
-//       "Resume fetched successfully"
-//     )
-//   );
-// });
 
 const uploadResume = asyncHandler(async (req, res) => {
   if (!req.file) {
@@ -83,23 +64,6 @@ console.log("Saved Resume:", resume);
   );
 });
 
-//  const getResumeHistory = asyncHandler(async (req, res) => {
-//   const resumes = await Resume.find({
-//     user: req.user._id,
-//   })
-//     .sort({ createdAt: -1 })
-//     .select(
-//       "fileName atsScore createdAt strengths weaknesses suggestions"
-//     );
-
-//   return res.status(200).json(
-//     new ApiResponse(
-//       200,
-//       resumes,
-//       "Resume history fetched successfully"
-//     )
-//   );
-// });
 
 const getResumeHistory = asyncHandler(async (req, res) => {
 

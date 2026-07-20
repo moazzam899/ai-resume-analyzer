@@ -55,30 +55,6 @@ ${resumeText}
   return completion.choices[0].message.content;
 };
 
-// const generateInterviewQuestions = async (resumeText) => {
-
-// const prompt = `
-// Based on this resume generate:
-
-// 10 HR Questions
-
-// 10 Technical Questions
-
-// 5 Project Questions
-
-// Return JSON only.
-
-// Resume:
-
-// ${resumeText}
-// `;
-
-// const result = await model.generateContent(prompt);
-
-// return result.response.text();
-
-// };
-
 const generateInterviewQuestions = async (resumeText) => {
 
   const prompt = `
