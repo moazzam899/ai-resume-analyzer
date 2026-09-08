@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/users", userRoutes);
-app.use("/api/resume", resumeRoutes);
+app.use("/api/resume", resumeRoutes); 
 
 app.get("/", (req, res) => {
     res.send("AI Resume Analyzer Backend Running...");
