@@ -1,4 +1,5 @@
 # AI Resume Analyzer
+myairesumeanalyzer.netlify.app
 
 A full-stack MERN application for resume analysis and management.
 
