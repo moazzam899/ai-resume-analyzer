@@ -24,4 +24,4 @@ A full-stack MERN application for resume analysis and management.
 
 ## Project Status
 
-🚀 Currently Under Development
+Completed
